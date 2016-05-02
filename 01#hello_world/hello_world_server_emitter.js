@@ -2,10 +2,11 @@ var server = require("http").createServer()
 
 server.on("request", function(request, response) {
 	console.log("> REQUEST STARTED")
+        request.on("data", function() {})
 	request.on("end", function() {
 		console.log("> REQUEST CLOSED")
 		response.writeHead(200, {
-			"Content-Type": "plain/text"
+			"Content-Type": "text/html"
 		})
 		response.end("Hello World\n")
 		server.close()

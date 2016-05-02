@@ -2,7 +2,7 @@ var http = require("http")
 
 var server = http.createServer(function(request, response) {
 	response.writeHead(200, {
-		"Content-Type": "plain/text"
+		"Content-Type": "text/html"
 	})
 	response.write("Hello World\n")
 	response.end()

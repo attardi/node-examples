@@ -21,7 +21,7 @@ server.on("request", function(request, response) {
     })
 
     request.on("end", function() {
-        response.writeHead(200, { "Content-Type": "plain/text" })
+        response.writeHead(200, { "Content-Type": "text/html" })
         response.end("OK\n")
         output.end()
         server.close()
